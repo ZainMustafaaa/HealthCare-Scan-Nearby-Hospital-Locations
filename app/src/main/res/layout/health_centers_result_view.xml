@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:background="#f5f5f5"
+        android:elevation="10dp">
+
+        <TextView
+            android:id="@+id/placeNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="8dp"
+
+            android:layout_marginTop="8dp"
+            android:text="Place Name"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/ratingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="3.5"
+            android:textSize="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/imageView4" />
+
+        <TextView
+            android:id="@+id/openingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Open now: "
+            android:textSize="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/imageView4"
+            android:layout_marginBottom="13dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            app:srcCompat="@android:drawable/btn_star_big_on"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/placeNameTextView" />
+
+    </RelativeLayout>
+
+</LinearLayout>

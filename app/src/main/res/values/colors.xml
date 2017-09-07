@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--201B1A-->
+
+
+    <color name="colorPrimary">#201B1A</color>
+    <color name="colorPrimaryDark">#201B1A</color>
+    <color name="colorAccent">#201B1A</color>
+    <color name="titleFont">#201B1A</color>
+
+    <!--<color name="colorPrimary">#4c8d87</color>-->
+    <!--<color name="colorPrimaryDark">#4c8d87</color>-->
+    <!--<color name="colorAccent">#4c8d87</color>-->
+    <!--<color name="titleFont">#4c8d87</color>-->
+
+</resources>
