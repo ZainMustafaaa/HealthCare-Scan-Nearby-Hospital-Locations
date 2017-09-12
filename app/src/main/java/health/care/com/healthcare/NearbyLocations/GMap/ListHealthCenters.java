@@ -101,8 +101,7 @@ public class ListHealthCenters extends AppCompatActivity {
          * @param setOnClickListener
          * */
         scanButton.setOnClickListener(new View.OnClickListener() {
-            /**
-             * override onCLick method
+            /*** override onCLick method
              * @param view
              * */
             @Override
@@ -157,7 +156,6 @@ public class ListHealthCenters extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     /**
@@ -201,8 +199,7 @@ public class ListHealthCenters extends AppCompatActivity {
             throw new IllegalArgumentException("No GPS");
         } else if (!isGooglePlayServicesAvailable(this)) {
             throw new IllegalArgumentException("No Google Play Services Available");
-        } else
-            getLocation();
+        } else getLocation();
 
     }
 
@@ -247,8 +244,7 @@ public class ListHealthCenters extends AppCompatActivity {
             location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         }
 
-        if (location == null)
-            throw new IllegalArgumentException("Cann't trace location");
+        if (location == null) throw new IllegalArgumentException("Cann't trace location");
 
         latitude = location.getLatitude();
         longitude = location.getLongitude();
@@ -261,19 +257,21 @@ public class ListHealthCenters extends AppCompatActivity {
     protected void fillList() {
 
         ArrayList<String> placeName = new ArrayList();
-        for (int i = 0; i < GeometryController.detailArrayList.size(); i++)
+        for (int i = 0; i < GeometryController.detailArrayList.size(); i++){
             placeName.add(GeometryController.detailArrayList.get(i).getHospitalName());
+        }
 
         ArrayList<String> ratingText = new ArrayList();
-        for (int i = 0; i < GeometryController.detailArrayList.size(); i++)
+        for (int i = 0; i < GeometryController.detailArrayList.size(); i++){
             ratingText.add(GeometryController.detailArrayList.get(i).getRating());
+        }
 
         ArrayList<String> openNow = new ArrayList<>();
-        for (int i = 0; i < GeometryController.detailArrayList.size(); i++)
+        for (int i = 0; i < GeometryController.detailArrayList.size(); i++){
             openNow.add(GeometryController.detailArrayList.get(i).getOpeningHours());
+        }
 
         CustomPlacesAdapter customPlacesAdapter = new CustomPlacesAdapter(this, placeName, ratingText, openNow);
-
         centersListView.setAdapter(customPlacesAdapter);
         MainActivity.progressDialog.cancel();
     }
@@ -340,5 +338,4 @@ public class ListHealthCenters extends AppCompatActivity {
             }
         }
     }
-
 }
