@@ -17,8 +17,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import java.util.ArrayList;
 
-/**
- * Created by zainm on 28-Jun-17.
+/** * Created by zainm on 28-Jun-17.
  */
 
 public class GeometryController {
@@ -52,7 +51,6 @@ public class GeometryController {
                 try {
                     JSONObject jsonObject = array.getJSONObject(i);
                     NearbyHospitalsDetail hospitalsDetail = new NearbyHospitalsDetail();
-
 
                     if(jsonObject.getString("name")!=null)  hospitalsDetail.setHospitalName(jsonObject.getString("name"));
                     else  hospitalsDetail.setHospitalName("Not Available");
