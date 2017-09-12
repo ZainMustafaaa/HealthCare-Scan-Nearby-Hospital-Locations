@@ -130,7 +130,7 @@ public class RequiredMedicines extends AppCompatActivity {
          * */
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-
+            
             if(e2.getX()<e1.getX()){
                 if(index<TOTAL_MEDICINES-1){
                     index++;
@@ -148,4 +148,3 @@ public class RequiredMedicines extends AppCompatActivity {
         }
     }
 }
-
