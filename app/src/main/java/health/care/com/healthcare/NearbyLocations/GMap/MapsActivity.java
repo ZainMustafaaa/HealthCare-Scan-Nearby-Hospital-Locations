@@ -90,10 +90,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
              * */
             @Override
             public void onClick(View view) {
-                if(checkBox.isChecked())
-                    mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-                else
-                    mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                if(checkBox.isChecked()) mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                else mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
             }
         });
     }
@@ -147,6 +145,4 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         }
     }
-
-
 }
