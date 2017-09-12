@@ -54,10 +54,8 @@ public class GeometryController {
                     NearbyHospitalsDetail hospitalsDetail = new NearbyHospitalsDetail();
 
 
-                    if(jsonObject.getString("name")!=null)
-                        hospitalsDetail.setHospitalName(jsonObject.getString("name"));
-                    else
-                        hospitalsDetail.setHospitalName("Not Available");
+                    if(jsonObject.getString("name")!=null)  hospitalsDetail.setHospitalName(jsonObject.getString("name"));
+                    else  hospitalsDetail.setHospitalName("Not Available");
 
                     try {
                         hospitalsDetail.setRating(String.valueOf(jsonObject.getDouble("rating")));
@@ -66,8 +64,7 @@ public class GeometryController {
                     }
 
                     try {
-                        if (jsonObject.getJSONObject("opening_hours").getBoolean("open_now"))
-                            hospitalsDetail.setOpeningHours("Opened");
+                        if (jsonObject.getJSONObject("opening_hours").getBoolean("open_now"))  hospitalsDetail.setOpeningHours("Opened");
                         else hospitalsDetail.setOpeningHours("closed");
                     } catch (Exception e) {
                         hospitalsDetail.setOpeningHours("Not Available");
@@ -78,8 +75,6 @@ public class GeometryController {
                             jsonObject.getJSONObject("geometry").getJSONObject("location").getDouble("lng")});
 
                     detailArrayList.add(hospitalsDetail);
-
-
                 }catch (Exception e){
                     e.printStackTrace();
                 }
@@ -94,4 +89,3 @@ public class GeometryController {
         Log.d("Array Loaded with size ", "Size of "+detailArrayList.size());
     }
 }
-
