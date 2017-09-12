@@ -18,7 +18,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
-
 import health.care.com.healthcare.R;
 
 /**
@@ -95,7 +94,6 @@ public class CustomMedicalProblemsAdapter extends BaseAdapter {
 
         imageView.setImageResource(idImages.get(i));
         textView.setText(textViewList.get(i));
-
 
         return view;
     }
