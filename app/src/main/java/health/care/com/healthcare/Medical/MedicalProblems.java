@@ -62,8 +62,7 @@ public class MedicalProblems extends AppCompatActivity {
             }
         });
 
-        if(MainActivity.progressDialog!=null)
-            MainActivity.progressDialog.cancel();
+        if(MainActivity.progressDialog!=null) MainActivity.progressDialog.cancel();
     }
 
     /** listItemSelector method
