@@ -86,8 +86,7 @@ public class CustomPlacesAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
-        if(view == null)
-            view = view.inflate(context, R.layout.health_centers_result_view, null);
+        if(view == null) view = view.inflate(context, R.layout.health_centers_result_view, null);
 
         TextView placeTextView = (TextView) view.findViewById(R.id.placeNameTextView);
         TextView ratingTextView = (TextView) view.findViewById(R.id.ratingTextView);
