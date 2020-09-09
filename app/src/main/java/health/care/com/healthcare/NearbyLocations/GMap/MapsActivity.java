@@ -14,8 +14,9 @@ package health.care.com.healthcare.NearbyLocations.GMap;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentActivity;
+
 import android.view.View;
 import android.widget.CheckBox;
 import com.google.android.gms.maps.CameraUpdateFactory;

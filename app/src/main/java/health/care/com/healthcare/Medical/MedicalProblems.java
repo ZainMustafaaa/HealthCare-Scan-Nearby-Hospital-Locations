@@ -14,10 +14,12 @@ package health.care.com.healthcare.Medical;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 import health.care.com.healthcare.Adapter.CustomMedicalProblemsAdapter;
 import health.care.com.healthcare.MainActivity;

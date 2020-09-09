@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HealthCare.iml" filepath="$PROJECT_DIR$/HealthCare.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HealthCare-Scan-Nearby-Hospital-Locations.iml" filepath="$PROJECT_DIR$/HealthCare-Scan-Nearby-Hospital-Locations.iml" group="HealthCare-Scan-Nearby-Hospital-Locations" />
+      <module fileurl="file://$PROJECT_DIR$/app/HealthCare-Scan-Nearby-Hospital-Locations-app.iml" filepath="$PROJECT_DIR$/app/HealthCare-Scan-Nearby-Hospital-Locations-app.iml" group="HealthCare-Scan-Nearby-Hospital-Locations/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
