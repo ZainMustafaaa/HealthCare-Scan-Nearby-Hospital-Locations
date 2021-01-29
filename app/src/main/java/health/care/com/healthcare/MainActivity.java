@@ -12,12 +12,18 @@
 
 package health.care.com.healthcare;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import android.view.View;
 import android.widget.Toast;
 import health.care.com.healthcare.Medical.MedicalProblems;
@@ -36,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        requestLocationPermission();
 
         /** initializing onClickListener method for medical button
          * @param onClickListener
@@ -100,5 +108,24 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.setMessage(message);
         progressDialog.setCancelable(false);
         progressDialog.show();
+    }
+    
+    private void requestLocationPermission(){
+        
+        // creating request dialog
+        ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION},1);
+        
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(requestCode == 1){
+            if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                
+            }else {
+                Toast.makeText(this, "Without the location permission we will be unable to show the hospital list ", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }
